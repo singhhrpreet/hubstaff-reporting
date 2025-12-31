@@ -11,8 +11,8 @@ load_dotenv()
 # ------------------ CONFIG ------------------
 REFRESH_TOKEN = os.getenv("YOUR_REFRESH_TOKEN")
 ORG_ID = os.getenv("ORG_ID")
-START_DATE = "2025-10-28T00:00:00Z"
-STOP_DATE  = "2025-10-31T00:00:00Z" # Accepts 7 day max range
+START_DATE = "2025-11-14T00:00:00Z"
+STOP_DATE  = "2025-11-21T00:00:00Z" # Accepts 7 day max range
 TOKEN_FILE = "hubstaff_token.json"  # Local cache for access token
 
 # ------------------ STEP 1: Load or refresh access token ------------------
