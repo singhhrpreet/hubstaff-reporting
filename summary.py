@@ -11,8 +11,8 @@ load_dotenv()
 # ------------------ CONFIG ------------------
 REFRESH_TOKEN = os.getenv("YOUR_REFRESH_TOKEN")
 ORG_ID = os.getenv("ORG_ID")
-START_DATE = "2025-11-14T00:00:00Z"
-STOP_DATE  = "2025-11-21T00:00:00Z" # Accepts 7 day max range
+START_DATE = "2026-03-29T00:00:00-04:00"
+STOP_DATE  = "2026-03-31T00:00:00-04:00" # Accepts 7 day max range
 TOKEN_FILE = "hubstaff_token.json"  # Local cache for access token
 
 # ------------------ STEP 1: Load or refresh access token ------------------
@@ -149,5 +149,7 @@ if __name__ == "__main__":
     export_to_csv(summary)
 
     print("\n=== Summary by Client ===")
+    print(f"\n=== Start Date: {START_DATE} ===")
+    print(f"=== Stop Date: {STOP_DATE} ===")
     for client, stats in summary.items():
         print(f"{client}: {stats['tracked_hours']} hrs (tracked_seconds={stats['tracked']})")
